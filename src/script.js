@@ -21,12 +21,49 @@
 
 
 // Introduction to the Regular Expression Challenges
-// Using the Test Method
-// Match Literal String
-// Match a literal String with Different Possibilities
-// Ignore Case While Matching
-// Extract Matches
-// Find More Than the First Match
+
+//1. Using the Test Method
+
+// let myString = "Hello, World!";
+// let myRegex = /Hello/;
+// let result = myRegex.test(myString);
+// console.log(result);
+
+//2.  Match Literal String
+
+// let waldoIsHiding = "Somewhere Waldo is hiding in the test.";
+// let waldoRegex = /Waldo/;
+// let result = waldoRegex.test(waldoIsHiding);
+// console.log(result);
+
+//3. Match a literal String with Different Possibilities
+
+// let petString = "James has a pet cat.";
+// let petRegex = /dog|cat|bird|fish/;
+// let result = petRegex.test(petString);
+// console.log(result);
+
+//4. Ignore Case While Matching
+
+// let myString = "freeCodeCamp";
+// let fccRegex = /freecodecamp/i;
+// let result = fccRegex.test(myString);
+// console.log(result);
+
+//5. Extract Matches
+
+// let extractStr = "Extract the word 'coding' from this string.";
+// let codingRegex = /coding/;
+// let result = extractStr.match(codingRegex);
+// console.log(result);
+
+//6. Find More Than the First Match
+
+// let twinkleStar = "Twinkle, twinkle, little star";
+// let starRegex = /twinkle/gi;
+// let result = twinkleStar.match(starRegex);
+// console.log(result);
+
 //7. Regular Expressions: Match Anything with Wildcard Period
 
 // let exampleStr = "let's have fun with regular expressions!";
@@ -203,7 +240,7 @@
 // console.log(result);
 
 //33. Regular Expressions: Remove Whitespace from Start and End
-let hello = "  Hello, World!  ";
-let wsRegex = /^\s+|\s+$/g;
-let result = hello.replace(wsRegex, "");
-console.log(result);
+// let hello = "  Hello, World!  ";
+// let wsRegex = /^\s+|\s+$/g;
+// let result = hello.replace(wsRegex, "");
+// console.log(result);
