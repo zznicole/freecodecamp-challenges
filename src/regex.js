@@ -1,22 +1,22 @@
 // ES6: Use getters and setters to Control Access to an Object
-class Thermostat {
-  constructor(fTemp) {
-    this._temp = 5/9 * (fTemp -32)
-  }
-  get temperature() {
-    return this._temp;
-  }
+// class Thermostat {
+//   constructor(fTemp) {
+//     this._temp = 5/9 * (fTemp -32)
+//   }
+//   get temperature() {
+//     return this._temp;
+//   }
 
-  set temperature(updatedTemp){
-    this.temp = updatedTemp;
+//   set temperature(updatedTemp){
+//     this.temp = updatedTemp;
     
-  }
- }
+//   }
+//  }
 
- const thermos = new Thermostat(76);
- let temp = thermos.temperature;
- thermos.temperature = 26;
- temp = thermos.temperature;
+//  const thermos = new Thermostat(76);
+//  let temp = thermos.temperature;
+//  thermos.temperature = 26;
+//  temp = thermos.temperature;
 
 
 
