@@ -1,15 +1,15 @@
-//1. Basic Date Structures: Use an Array to Store a Collection of Data
+//1. Basic Data Structures: Use an Array to Store a Collection of Data
 
 // let yourArray = ['coding', 6, 'is' ,'fun', true, undefined, null];
 
-//2. Basic Date Structures: Access an Array's Contents Using Bracket Notation
+//2. Basic Data Structures: Access an Array's Contents Using Bracket Notation
 
 // let myArray = ["a", "b", "c", "d"];
 
 // myArray[1] = "f";
 // console.log(myArray);
 
-//3. Basic Date Structures: Add Items to an Array with push() and unshift()
+//3. Basic Data Structures: Add Items to an Array with push() and unshift()
 
 // function mixedNumbers(arr) {
 //   arr.unshift('I', 2, 'three');
@@ -19,7 +19,7 @@
 
 // console.log(mixedNumbers(['IV', 5, 'six']));
 
-//4. Basic Date Structures: Remove Items from an Array with pop() and shift()
+//4. Basic Data Structures: Remove Items from an Array with pop() and shift()
 
 // function popShift(arr) {
 //   let popped =  arr.pop();
@@ -29,13 +29,13 @@
 
 // console.log(popShift(['challenge', 'is', 'not', 'complete']));
 
-//5. Basic Date Structures: Remove Items Using splice()
+//5. Basic Data Structures: Remove Items Using splice()
 
 // const arr = [2, 4, 5, 1, 7, 5, 2, 1];
 // arr.splice(1, 4);
 // console.log(arr);
 
-//6. Basic Date Structures: Add Items Using splice()
+//6. Basic Data Structures: Add Items Using splice()
 
 // function htmlColorNames(arr) {
 //   arr.splice(0, 2,'DarkSalmon', 'BlanchedAlmond');
@@ -44,7 +44,7 @@
 
 // console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
 
-//7. Basic Date Structures: Copy Array Items Using slice()
+//7. Basic Data Structures: Copy Array Items Using slice()
 
 // function forecast(arr) {
 //   let newArr = arr.slice(2, 4);
@@ -53,7 +53,7 @@
 
 // console.log(forecast(['cold','rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
 
-//8. Basic Date Structures: Copy an Array with the Spread Operator
+//8. Basic Data Structures: Copy an Array with the Spread Operator
 
 // function copyMachine(arr, num) {
 //    let newArr = [];
@@ -66,7 +66,7 @@
 
 // console.log(copyMachine([true, false, true], 3));
 
-//9. Basic Date Structures: Combine Arrays with the Spread Operator
+//9. Basic Data Structures: Combine Arrays with the Spread Operator
 
 // function spreadOut() {
 //   let fragment = ['to', 'code'];
@@ -76,14 +76,103 @@
 
 // console.log(spreadOut());
 
-//10. Basic Date Structures: Check For The Presence of an Element With indexOf()
+//10. Basic Data Structures: Check For The Presence of an Element With indexOf()
 
-function quickCheck(arr, elem) {
-  if (arr.indexOf(elem) >= 0){
-    return true;
-  } else {
-    return false;
-  }
-}
+// function quickCheck(arr, elem) {
+//   if (arr.indexOf(elem) >= 0){
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
-console.log(quickCheck(['squash', 'onions', 'shallots'], 'onions'));
+// console.log(quickCheck(['squash', 'onions', 'shallots'], 'onions'));
+
+//11. Basic Data Structures: Iterate Through All an Array's Items Using For Loops
+
+// function filteredArray(arr, elem) {
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i].indexOf(elem) == -1) {
+//       newArr.push(arr[i]);
+//     }
+//   }
+//   return newArr;
+// }
+
+// console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+
+//12. Basic Data Structures: Create complex multi-dimensional arrays
+
+// let myNestedArray = [
+//   ['unshift', false, 1, 2, 3, 'complex', 'nested'],
+//   ['loop', 'shift', 6, 7, 1000, 'method'],
+//   ['concat', false, true, 'spread','array', ['deep']],
+//   ['mutate', 1327.98, 'splice', 'slice', 'push', [['deeper']]],
+//   ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth',[[['deepest']]]]
+// ];
+
+// console.log(myNestedArray[4][6][0][0][0]);
+
+//13. Basic Data Structures: Add Key-Value Pairs to JavaScript Objects
+
+// let foods = {
+//   apples: 25,
+//   oranges: 32,
+//   plums: 28
+// };
+
+// foods.bananas = 13;
+// foods.grapes = 35;
+// foods.strawberries = 27;
+
+// console.log(foods);
+
+//13. Basic Data Structures: Modify an Object Nested Within an Object
+
+// let userActivity = {
+//   id: 23894201352,
+//   date: 'January 1, 2017',
+//   data: {
+//     totalUsers: 51,
+//     online: 42
+//   }
+// };
+
+// userActivity.data.online = 45;
+// console.log(userActivity);
+
+//14. Basic Data Structures: Access Property Names with Bracket Notation
+
+// let foods = {
+//   apples: 25,
+//   oranges: 32,
+//   plums: 28,
+//   bananas: 13,
+//   grapes: 35,
+//   strawberries: 27,
+// };
+
+// function checkInventory (scannedItem) {
+//   let result = foods[scannedItem]
+//   return result;
+// }
+
+// console.log(checkInventory('apples'));
+
+//15. Basic Data Structures: Use the delete Keyword to Remove Object Properties
+
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27,
+};
+
+delete foods.oranges;
+delete foods.plums;
+delete foods.strawberries;
+
+console.log(foods);
