@@ -128,7 +128,7 @@
 
 // console.log(foods);
 
-//13. Basic Data Structures: Modify an Object Nested Within an Object
+//14. Basic Data Structures: Modify an Object Nested Within an Object
 
 // let userActivity = {
 //   id: 23894201352,
@@ -142,7 +142,7 @@
 // userActivity.data.online = 45;
 // console.log(userActivity);
 
-//14. Basic Data Structures: Access Property Names with Bracket Notation
+//15. Basic Data Structures: Access Property Names with Bracket Notation
 
 // let foods = {
 //   apples: 25,
@@ -160,7 +160,7 @@
 
 // console.log(checkInventory('apples'));
 
-// 15. Basic Data Structures: Use the delete Keyword to Remove Object Properties
+// 16. Basic Data Structures: Use the delete Keyword to Remove Object Properties
 
 // let foods = {
 //   apples: 25,
@@ -177,34 +177,119 @@
 
 // console.log(foods);
 
-// 16. Basic Data Structures: Check if an Object has a Property
+// 17. Basic Data Structures: Check if an Object has a Property
 
-let users = {
-  Alan: {
-    age: 27,
-    online: true
-  },
-  Jeff: {
-    age: 32,
-    online: true
-  },
-  Sarah: {
-    age: 48,
-    online: true
-  },
-  Ryan: {
-    age: 19,
-    online: true
+// let users = {
+//   Alan: {
+//     age: 27,
+//     online: true
+//   },
+//   Jeff: {
+//     age: 32,
+//     online: true
+//   },
+//   Sarah: {
+//     age: 48,
+//     online: true
+//   },
+//   Ryan: {
+//     age: 19,
+//     online: true
+//   }
+// };
+
+// function isEveryoneHere(obj) {
+//   if ('Alan' in obj && 'Jeff' in obj && 'Sarah' in obj && 'Ryan' in obj) {
+//     return true;
+//   } 
+//     return false;
+  
+// }
+
+// console.log(isEveryoneHere(users));
+
+// 18. Basic Data Structures: Iterate Through the Keys of an Object with a for...in Statement
+
+// function countOnline(usersObj) {
+//   let result = 0;
+//   for(let user in usersObj) {
+//     if (usersObj[user].online ===true) {
+//       result++;
+//     }
+//   }
+//   return result;
+// }
+
+// let users = {
+//   Alan:{
+//     online: false
+//   },
+//   Jeff:{
+//     online: true
+//   },
+//   Sarah:{
+//     online: false
+//   },
+//   Ryan:{
+//     online: true
+//   },
+// };
+
+// console.log(countOnline(users));
+
+// 19. Basic Data Structures: Generate an Array of All Object Keys with Object.keys()
+
+// let users = {
+//     Alan:{
+//       age: 27,
+//       online: false
+//     },
+//     Jeff:{
+//       age: 32,
+//       online: true
+//     },
+//     Sarah:{
+//       age: 48,
+//       online: false
+//     },
+//     Ryan:{
+//       age: 19,
+//       online: true
+//     }
+//   };
+
+
+// function getArrayOfUser(obj) {
+//   return Object.keys(obj);
+//   }
+
+//  console.log(getArrayOfUser(users));
+
+ // 20. Basic Data Structures: Modify an Array Stored in an Object
+
+let user = {
+  name: 'Kenneth',
+  age: 28,
+  data: {
+    username: 'kennethCodesAllDay',
+    joinDate: 'March 26, 2016',
+    organization: 'freeCodeCamp',
+    friends: [
+      'Sam',
+      'Kira',
+      'Tomo'
+    ],
+    location: {
+      city: 'San Francisco',
+      state: 'CA',
+      country: 'USA'
+    }
   }
 };
-
-function isEveryoneHere(obj) {
-  if ('Alan' && 'Jeff' && 'Sarah' && 'Ryan' in obj) {
-    return true;
-  } 
-    return false;
-  
+ 
+function addFriend(userObj, friend) {
+  userObj.data.friends.push(friend);
+  return userObj.data.friends;
 }
 
-console.log(isEveryoneHere(users));
-
+console.log(addFriend(user, 'pete'));
