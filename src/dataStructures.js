@@ -160,19 +160,51 @@
 
 // console.log(checkInventory('apples'));
 
-//15. Basic Data Structures: Use the delete Keyword to Remove Object Properties
+// 15. Basic Data Structures: Use the delete Keyword to Remove Object Properties
 
-let foods = {
-  apples: 25,
-  oranges: 32,
-  plums: 28,
-  bananas: 13,
-  grapes: 35,
-  strawberries: 27,
+// let foods = {
+//   apples: 25,
+//   oranges: 32,
+//   plums: 28,
+//   bananas: 13,
+//   grapes: 35,
+//   strawberries: 27,
+// };
+
+// delete foods.oranges;
+// delete foods.plums;
+// delete foods.strawberries;
+
+// console.log(foods);
+
+// 16. Basic Data Structures: Check if an Object has a Property
+
+let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
 };
 
-delete foods.oranges;
-delete foods.plums;
-delete foods.strawberries;
+function isEveryoneHere(obj) {
+  if ('Alan' && 'Jeff' && 'Sarah' && 'Ryan' in obj) {
+    return true;
+  } 
+    return false;
+  
+}
 
-console.log(foods);
+console.log(isEveryoneHere(users));
+
