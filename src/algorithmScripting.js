@@ -118,12 +118,22 @@
 
 //10.Boo who
 
-function booWho(bool) {
-return typeof bool === "boolean";
-}
+// function booWho(bool) {
+// return typeof bool === "boolean";
+// }
 
-console.log(booWho(9));
+// console.log(booWho(9));
+
 //11.Title Case a Sentence
+
+ function titleCase(str) {
+   
+  let newStr = str.toLowerCase().split(" ");
+  let result = newStr.map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
+  return result.join(" ");
+ }
+
+titleCase("I'm a litte tea pot");
 //12.Slice and Splice
 //13.Falsy Bouncer
 //14.Where do I Belong
