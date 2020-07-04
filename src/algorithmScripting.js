@@ -126,15 +126,27 @@
 
 //11.Title Case a Sentence
 
- function titleCase(str) {
+//  function titleCase(str) {
    
-  let newStr = str.toLowerCase().split(" ");
-  let result = newStr.map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
-  return result.join(" ");
- }
+//   let newStr = str.toLowerCase().split(" ");
+//   console.log(newStr);
+//   let result = newStr.map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
+//   return result.join(" ");
+//  }
 
-titleCase("I'm a litte tea pot");
+//   titleCase("I'm a litte tea pot");
+
 //12.Slice and Splice
+
+function frankenSplice(arr1, arr2, n) {
+  let newArr = arr2.slice();
+  newArray.splice(n, 0, ...arr1);
+ 
+  return  newArr;
+}
+
+console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
+
 //13.Falsy Bouncer
 //14.Where do I Belong
 //15.Mutations
