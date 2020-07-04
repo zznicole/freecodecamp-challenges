@@ -138,16 +138,23 @@
 
 //12.Slice and Splice
 
-function frankenSplice(arr1, arr2, n) {
-  let newArr = arr2.slice();
-  newArray.splice(n, 0, ...arr1);
+// function frankenSplice(arr1, arr2, n) {
+//   let newArr = arr2.slice();
+//   newArr.splice(n, 0, ...arr1);
  
-  return  newArr;
-}
+//   return  newArr;
+// }
 
-console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
+// console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
 
 //13.Falsy Bouncer
+
+function bouncer(arr) {
+  
+  return arr.filter(Boolean);
+}
+
+console.log(bouncer([7, "ate", "", false, 9]));
 //14.Where do I Belong
 //15.Mutations
 //16.Chunky Monkey
