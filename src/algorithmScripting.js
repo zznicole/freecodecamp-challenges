@@ -149,12 +149,23 @@
 
 //13.Falsy Bouncer
 
-function bouncer(arr) {
+// function bouncer(arr) {
   
-  return arr.filter(Boolean);
+//   return arr.filter(Boolean);
+// }
+
+// console.log(bouncer([7, "ate", "", false, 9]));
+
+//14.Where do I Belong
+
+function getIndexToIns(arr, num) {
+  
+  arr.push(num);
+  arr.sort((a, b) => a - b);
+  return arr.indexOf(num);
 }
 
-console.log(bouncer([7, "ate", "", false, 9]));
-//14.Where do I Belong
+console.log(getIndexToIns([40, 60], 50));
+
 //15.Mutations
 //16.Chunky Monkey
