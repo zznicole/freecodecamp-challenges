@@ -158,14 +158,29 @@
 
 //14.Where do I Belong
 
-function getIndexToIns(arr, num) {
+// function getIndexToIns(arr, num) {
   
-  arr.push(num);
-  arr.sort((a, b) => a - b);
-  return arr.indexOf(num);
-}
+//   arr.push(num);
+//   arr.sort((a, b) => a - b);
+//   return arr.indexOf(num);
+// }
 
-console.log(getIndexToIns([40, 60], 50));
+// console.log(getIndexToIns([40, 60], 50));
 
 //15.Mutations
+
+function mutation(arr) {
+
+    let firstWord = arr[0].toLowerCase();
+    let secondWord = arr[1].toLowerCase();
+
+    for (var i = 0; i < secondWord.length; i++) {
+      if (firstWord.indexOf(secondWord[i]) < 0) 
+      return false;
+    }
+    return true;
+ 
+}
+console.log(mutation(["hello", "hey"]));
+
 //16.Chunky Monkey
