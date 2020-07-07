@@ -169,18 +169,28 @@
 
 //15.Mutations
 
-function mutation(arr) {
+// function mutation(arr) {
 
-    let firstWord = arr[0].toLowerCase();
-    let secondWord = arr[1].toLowerCase();
+//     let firstWord = arr[0].toLowerCase();
+//     let secondWord = arr[1].toLowerCase();
 
-    for (var i = 0; i < secondWord.length; i++) {
-      if (firstWord.indexOf(secondWord[i]) < 0) 
-      return false;
-    }
-    return true;
+//     for (let i = 0; i < secondWord.length; i++) {
+//       if (firstWord.indexOf(secondWord[i]) < 0) 
+//       return false;
+//     }
+//     return true;
  
-}
-console.log(mutation(["hello", "hey"]));
+// }
+// console.log(mutation(["hello", "hey"]));
 
 //16.Chunky Monkey
+
+function chunkyArrayInGroups(arr, size) {
+  let newArr = [];
+  while(arr.length) {
+    newArr.push(arr.splice(0,size));
+  }
+    return newArr;
+}
+
+console.log(chunkyArrayInGroups(['a','b','c','d'], 2));
